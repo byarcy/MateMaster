@@ -38,6 +38,7 @@ public class RespuestasFacil {
         return respuestasFacil [posf];
     }
     
+    //Metodo para separar las opciones de una posicion del arreglo "opc1,opc2,opc3,opc4" por una ","
     public String[] separarf (String cadenaF, String separadorF){
         StringTokenizer token = new StringTokenizer(cadenaF, separadorF);
          
@@ -52,6 +53,7 @@ public class RespuestasFacil {
         return auxF;
     }
     
+    //Metodo para establecer las respuestas separadas llamando al metodo separar
     public String[] setRespuestasFacil(int posf){
         String Cad = opcionesF[posf];
         String[] Sep = separarf (Cad,",");
@@ -93,6 +95,7 @@ public class RespuestasFacil {
         return respuestasFacil [posm];
     }
     
+    //Metodo para separar las opciones de una posicion del arreglo "opc1,opc2,opc3,opc4" por una ","
     public String[] separarm (String cadenam, String separadorm){
         StringTokenizer token1 = new StringTokenizer(cadenam, separadorm);
          
@@ -107,6 +110,7 @@ public class RespuestasFacil {
         return auxm;
     }
     
+    //Metodo para establecer las respuestas separadas llamando al metodo separar
     public String[] setRespuestasMedio(int posm){
         String Cadm = opcionesM[posm];
         String[] Sepm = separarm (Cadm,",");
@@ -147,6 +151,7 @@ public class RespuestasFacil {
         return respuestasDificil [posd];
     }
     
+    //Metodo para separar las opciones de una posicion del arreglo "opc1,opc2,opc3,opc4" por una ","
     public String[] separard (String cadenad, String separadord){
         StringTokenizer token2 = new StringTokenizer(cadenad, separadord);
          
@@ -161,6 +166,7 @@ public class RespuestasFacil {
         return auxd;
     }
     
+    //Metodo para establecer las respuestas separadas llamando al metodo separar
     public String[] setRespuestasDificil(int posd){
         String Cadd = opcionesD[posd];
         String[] Sepd = separard (Cadd,",");

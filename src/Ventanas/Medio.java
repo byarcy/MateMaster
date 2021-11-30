@@ -51,7 +51,9 @@ public class Medio extends javax.swing.JFrame {
         terminarm = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "MateMaster Medio", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 0, 36))); // NOI18N
 
         preguntaM.setText("Pregunta");
@@ -71,6 +73,7 @@ public class Medio extends javax.swing.JFrame {
             }
         });
 
+        siguientem.setBackground(new java.awt.Color(255, 255, 255));
         siguientem.setText("Siguiente");
         siguientem.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

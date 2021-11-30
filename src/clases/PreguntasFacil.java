@@ -4,13 +4,16 @@ package clases;
 
 public class PreguntasFacil {
     
-// Creamos un arreglo donde estan todas las preguntas separadas por una coma
+// Creamos un arreglo donde estan todas las preguntas separadas por una coma del nivel facil
     String[] preguntasfacil = {
       "Si tengo 3 manzanas y mi tía me regala 15 más. ¿cuántas manzanas tengo en total?",
       "El día de mi cumpleaños me regalaron plata, mi papá me regalo 30 pesos, mi mamá 30, mi hermano 8 y mi tío 22. ¿Cuánto reuní en total?",
       "Hay 25 duraznos, mi mamá se come 2, mi hermano se come 3, mi papá se come 3 y regala 10. ¿Cuántos duraznos quedan?",
       "¿Cuánto es la suma de 32 más 18?",
-      "¿Cuál de las siguientes opciones corresponde a trescientos veinticinco?"  
+      "¿Cuál de las siguientes opciones corresponde a trescientos veinticinco?",
+      "Alfredo recoge 7 dulces por cada casa que visita, ¿cuantos tendrá si visita 3 casas al final del día?",
+      "María tiene 10 juguetes, la profesora la entrega 5 más y le dice que reparta de a un juguete a sus otros 12 compañeros. ¿Después de repartir los juguetes a sus compañeros, con cuantos queda María?",
+      "¿Qué numero representa quinientos ochenta y ocho?"
     };
     
     //Creamos metodo para acceder a las preguntas por medio de un indice "posf"

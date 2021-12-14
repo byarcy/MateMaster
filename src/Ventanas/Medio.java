@@ -214,11 +214,6 @@ public class Medio extends javax.swing.JFrame {
     }//GEN-LAST:event_atrasmActionPerformed
 
     private void terminarmActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_terminarmActionPerformed
-        Final vistaFinalm = new Final();//Creamos objeto de la vista final
-        vistaFinalm.setVisible(true);//Hace que la final sea visible
-        dispose();//Esta vista se cierra
-        
-        
        
     }//GEN-LAST:event_terminarmActionPerformed
 

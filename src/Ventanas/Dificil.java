@@ -211,9 +211,7 @@ public class Dificil extends javax.swing.JFrame {
     }//GEN-LAST:event_atrasdActionPerformed
 
     private void terminardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_terminardActionPerformed
-        Final vistaFinald = new Final();//Creamos objeto de la vista final
-        vistaFinald.setVisible(true);//Hace que la final sea visible
-        dispose();//Esta vista se cierra
+        
     }//GEN-LAST:event_terminardActionPerformed
 
 

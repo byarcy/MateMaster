@@ -232,22 +232,19 @@ public class Facil extends javax.swing.JFrame {
 
     private void terminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_terminarActionPerformed
         
-        Final vistaFinal = new Final();//Creamos objeto de la vista final
-        vistaFinal.setVisible(true);//Hace que la final sea visible
-        dispose();//Esta vista se cierra
         
-        /**
+        
          int Resultado = 0;
          
          for(int i=0; i < 5;i++){
              //Compara la respuesta seleccionada con la respuesta verdadera
-             if(seleccion[i].equals(rf.getRespuestasFacil(i ))){
+             if(seleccion[i].equals(rf.getRespuestasFacil(i))){
                  Resultado = Resultado + 1;
              }
          }
          Resultado = Resultado * 20;
          JOptionPane.showMessageDialog(null, "La calificación es "+Resultado);
-         */
+         
          
     }//GEN-LAST:event_terminarActionPerformed
 

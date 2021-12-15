@@ -2,6 +2,7 @@
 package Ventanas;
 
 import clases.*;
+import javax.swing.JOptionPane;
 
 public class Dificil extends javax.swing.JFrame {
 
@@ -25,6 +26,7 @@ public class Dificil extends javax.swing.JFrame {
             opc1d.requestFocus();
             atrasd.setEnabled(false);
             terminard.setEnabled(false);
+            volverd.setEnabled(false);
     }
     
     int posd = 0;
@@ -49,20 +51,46 @@ public class Dificil extends javax.swing.JFrame {
         atrasd = new javax.swing.JButton();
         terminard = new javax.swing.JButton();
         siguiented = new javax.swing.JButton();
+        volverd = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "MateMaster Dificil", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 0, 36))); // NOI18N
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "MateMaster Dificil", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Comic Sans MS", 1, 36))); // NOI18N
 
+        preguntaD.setFont(new java.awt.Font("Palatino Linotype", 0, 24)); // NOI18N
         preguntaD.setText("Pregunta");
 
         buttonGroupd.add(opc2d);
+        opc2d.setFont(new java.awt.Font("Nirmala UI", 1, 18)); // NOI18N
+        opc2d.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                opc2dActionPerformed(evt);
+            }
+        });
 
         buttonGroupd.add(opc1d);
+        opc1d.setFont(new java.awt.Font("Nirmala UI", 1, 18)); // NOI18N
+        opc1d.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                opc1dActionPerformed(evt);
+            }
+        });
 
         buttonGroupd.add(opc3d);
+        opc3d.setFont(new java.awt.Font("Nirmala UI", 1, 18)); // NOI18N
+        opc3d.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                opc3dActionPerformed(evt);
+            }
+        });
 
         buttonGroupd.add(opc4d);
+        opc4d.setFont(new java.awt.Font("Nirmala UI", 1, 18)); // NOI18N
+        opc4d.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                opc4dActionPerformed(evt);
+            }
+        });
 
         atrasd.setText("Atras");
         atrasd.addActionListener(new java.awt.event.ActionListener() {
@@ -85,6 +113,13 @@ public class Dificil extends javax.swing.JFrame {
             }
         });
 
+        volverd.setText("Volver a jugar");
+        volverd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                volverdActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -97,17 +132,18 @@ public class Dificil extends javax.swing.JFrame {
                             .addComponent(opc3d)
                             .addComponent(opc2d)
                             .addComponent(opc4d)
-                            .addComponent(atrasd, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(atrasd, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(siguiented, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(terminard, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addComponent(volverd, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(38, 38, 38)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(preguntaD, javax.swing.GroupLayout.PREFERRED_SIZE, 655, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGap(0, 289, Short.MAX_VALUE)
-                                .addComponent(siguiented, javax.swing.GroupLayout.PREFERRED_SIZE, 112, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(154, 154, 154)
-                                .addComponent(terminard, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap())
+                        .addComponent(preguntaD, javax.swing.GroupLayout.PREFERRED_SIZE, 655, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(34, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
                     .addGap(69, 69, 69)
@@ -119,17 +155,22 @@ public class Dificil extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(preguntaD, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(74, 74, 74)
-                .addComponent(opc2d)
-                .addGap(18, 18, 18)
-                .addComponent(opc3d)
-                .addGap(18, 18, 18)
-                .addComponent(opc4d)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(terminard, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(siguiented, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(atrasd, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(74, 74, 74)
+                        .addComponent(opc2d)
+                        .addGap(18, 18, 18)
+                        .addComponent(opc3d)
+                        .addGap(18, 18, 18)
+                        .addComponent(opc4d)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 94, Short.MAX_VALUE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(terminard, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(siguiented, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(atrasd, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(volverd, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(43, 43, 43))
             .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(jPanel1Layout.createSequentialGroup()
@@ -162,7 +203,8 @@ public class Dificil extends javax.swing.JFrame {
         if(posd == 3)
             siguiented.setEnabled(false); //Boton Siguiente desactivado cuando llegue a la ultima pregunta
             terminard.setEnabled(true);//Boton terminar habilitado cuando termine el examen
-       
+            volverd.setEnabled(true);
+                    
         if(posd < 5){
             atrasd.setEnabled(true);//Boton atras habilitado 
             posd++;
@@ -211,8 +253,39 @@ public class Dificil extends javax.swing.JFrame {
     }//GEN-LAST:event_atrasdActionPerformed
 
     private void terminardActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_terminardActionPerformed
-        
+         int Resultado = 0;
+         
+         for(int i=0; i < 5;i++){
+             //Compara la respuesta seleccionada con la respuesta verdadera
+             if(selecciond[i].equals(rd.getRespuestasDificil(i ))){
+                 Resultado = Resultado + 1;
+             }
+         }
+         Resultado = Resultado * 20;
+         JOptionPane.showMessageDialog(null, "La calificación es "+Resultado);
     }//GEN-LAST:event_terminardActionPerformed
+
+    private void opc1dActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opc1dActionPerformed
+        selecciond [posd] = opc1d.getLabel();
+    }//GEN-LAST:event_opc1dActionPerformed
+
+    private void opc2dActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opc2dActionPerformed
+        selecciond [posd] = opc2d.getLabel();
+    }//GEN-LAST:event_opc2dActionPerformed
+
+    private void opc3dActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opc3dActionPerformed
+        selecciond [posd] = opc3d.getLabel();
+    }//GEN-LAST:event_opc3dActionPerformed
+
+    private void opc4dActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_opc4dActionPerformed
+        selecciond [posd] = opc4d.getLabel();
+    }//GEN-LAST:event_opc4dActionPerformed
+
+    private void volverdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverdActionPerformed
+        Inicio vistaInicio = new Inicio();//Creamos objeto de la vista inicio
+        vistaInicio.setVisible(true);//Hace que la vista inicial sea visible
+        dispose();//Esta vista se cierra
+    }//GEN-LAST:event_volverdActionPerformed
 
 
 
@@ -227,5 +300,6 @@ public class Dificil extends javax.swing.JFrame {
     private javax.swing.JLabel preguntaD;
     private javax.swing.JButton siguiented;
     private javax.swing.JButton terminard;
+    private javax.swing.JButton volverd;
     // End of variables declaration//GEN-END:variables
 }
